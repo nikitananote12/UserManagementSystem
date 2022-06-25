@@ -1,0 +1,80 @@
+.heading{
+    color: #717475;
+    font-weight: normal;
+    font-family: sans-serif;
+  }
+.container-fluid{
+    padding: 40px;
+    .table-head{
+        display: flex;
+        justify-content: space-between;
+        .newBtn{
+            margin: 15px;
+            button{
+                font-size: 1.25rem;
+                font-family: sans-serif;
+            }
+        }
+        h2{
+            font-family: serif;
+            color: #68d0f2;
+        }
+    }
+    .card{
+        .card-header{
+            display: flex;
+            justify-content: space-between;
+            .title{
+                padding: 10px 0 0 15px;
+                font-size: 1.25rem;
+                @extend .heading;
+            }
+            .menubar{
+                a{
+                    @extend .heading;
+                    text-decoration: none;
+                    outline: 1px solid #96a1b5;
+                    margin: 5px 20px 0 0;
+                    &:hover{
+                        background-color: #d5dee0;
+                    }
+                }
+            }
+            ::ng-deep pagination-controls .ngx-pagination {
+                margin-bottom: 0px;
+                margin-top: 5px;
+            }
+        }
+        .card-body{
+            table{
+                th{
+                    width: 20%;
+                    &.checkbox{
+                        width: 4%;
+                    }
+                }
+                .noData{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+body{
+    padding:50px;
+}
+.btn-group {  
+    white-space: nowrap;              
+}
+.btn-group .btn {  
+    float: none;
+    display: inline-block;
+}
+ .btn + .dropdown-toggle { 
+    margin-left: -4px;
+}
+
+.table-responsive {
+  overflow-y: visible !important;
+}

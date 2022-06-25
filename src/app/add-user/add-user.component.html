@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">Add New User</div>
+        <div class="card-body">
+            <form #userCreationForm="ngForm"  (ngSubmit)="saveUser(userCreationForm)">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">First Name</label>
+                    <input type="text" class="form-control" required #firstName='ngModel' [(ngModel)]="userObj.firstName" name="firstName" placeholder="Enter First Name">
+                    <span *ngIf="firstName.invalid && firstName.touched" class="error">First Name is required</span>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Last Name</label>
+                    <input type="text" class="form-control" required #lastName='ngModel' [(ngModel)]="userObj.lastName" name="lastName" placeholder="Enter Last Name">
+                    <span *ngIf="lastName.invalid && lastName.touched" class="error">Last Name is required field</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Username</label>
+                  <input type="text" class="form-control" required #userName='ngModel' [(ngModel)]="userObj.userName" name="userName" placeholder="Enter Username">
+                  <span *ngIf="userName.invalid && userName.touched" class="error">User Name is required field</span>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" required #city='ngModel' [(ngModel)]="userObj.city" name="city" placeholder="Enter City Name">
+                    <span *ngIf="city.invalid && city.touched" class="error">City is required field</span>
+                  </div>
+                  <div class="form-group dropdown col-md-6">
+                    <label for="inputState">Department</label>
+                    <select class="fa fa-caret" required #department='ngModel'  [(ngModel)]="userObj.department" name="department">
+                      <option value="accounts">Accounts and Finance</option>
+                      <option value="hr">HR</option>
+                      <option value="sales">Sales and Marketing</option>
+                      <option value="learning">Learning and Development</option>
+                      <option value="it">IT Services</option>
+                      <option value="development">Product Development</option>
+                      <option value="admin">Admin Department</option>
+                      <option value="security">Security and Transport</option>
+                    </select>
+                    <span *ngIf="department.invalid && department.touched" class="error">Department is required field</span>
+                  </div>
+                </div>
+                <button type="submit" [disabled]="userCreationForm.invalid" class="btn btn-primary" [ngClass]="{'cursor': userCreationForm.invalid}">Add User</button>
+                <button type="button" class="btn btn-secondary"  aria-label="cancel" (click)="close()">Cancel</button>
+              </form>
+        </div>
+    </div>
+</div>

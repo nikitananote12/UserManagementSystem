@@ -1,0 +1,25 @@
+footer{
+    background: #f8f9fa;
+    font-family: sans-serif;
+    img{
+        width: 150px;
+        height: 100px;
+    }
+    h5{
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .contact{
+        display: flex;
+        .info{
+            margin-top: 22px;
+            h6{
+                color: #3c6a85;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

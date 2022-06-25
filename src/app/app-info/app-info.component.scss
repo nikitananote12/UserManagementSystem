@@ -1,0 +1,34 @@
+.card{
+    margin: 50px;
+    .card-body{
+        h5{
+            padding-left: 25px;
+            font-family: serif;
+            color: #68d0f2;
+            font-size: 25px;
+        }
+        ul{
+            margin: 25px;
+            width: 50%;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+        p{
+            .badge-danger{
+                background-color: red;
+            }
+            .tab{
+                color: rgba(0,0,0,.55);
+                font-weight: 800;
+                background-color: lightgray;
+            }
+        }
+        .card{
+            .card-body{
+                &:hover{
+                    background-color: #d5dee0;
+                }
+            }
+        }
+    }
+}

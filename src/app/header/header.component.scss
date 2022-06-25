@@ -1,0 +1,28 @@
+.navbar{
+    padding-top: 0px;
+    .navbar-brand{
+        padding-left: 25px;
+        width: 130px;
+        height: 90px;
+    }
+    .navbar-collapse{
+        padding-top: 25px;
+        padding-left: 30px;
+        ul{
+            li{
+                padding-right: 30px;
+                a{
+                    font-size: 1.25rem;
+                    &:hover{
+                        background-color: #d5dee0;
+                    }
+                }
+                .nav-link{
+                    &.active{
+                        background-color: #d5dee0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.container-fluid{
+    padding: 40px;
+    .card{
+        .card-header{
+            padding: 15px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #717475;
+            font-family: sans-serif;
+        }
+        .card-body{
+            padding: 30px;
+            .form-row{
+                display: flex;
+            }
+            .form-group{
+                padding: 10px;
+                label{
+                    color: #717475;
+                    font-family: sans-serif;
+                    padding-bottom: 5px;
+                }
+                .error{
+                    color: red;
+                    font-size: 0.75rem;
+                }
+                &.dropdown{
+                    display: flex;
+                    flex-direction: column;
+                    select{
+                        height: 35px;
+                        border: 1px solid #ced4da;
+                    }
+                }
+            }
+            button{
+                margin: 25px 0 0 10px;
+                font-size: 1.25rem;
+                font-family: sans-serif;
+                &.cursor{
+                    cursor:not-allowed;
+                }
+            }
+        }
+    }
+}
